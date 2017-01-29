@@ -7,7 +7,7 @@
 Retrieve configuration
 
 ```
-curl --user <id:pw> /rest/config
+curl --user <id:pw> 192.168.1.212/rest/config
 ```
 
 
