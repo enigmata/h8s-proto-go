@@ -1,0 +1,232 @@
+{
+        "address": "11.11.11",
+        "name": "Basement hallway night light", 
+        "room": "Basement hallway", 
+        "roomLocation": "East socket", 
+        "type": "insteon/LampLinc",
+        "enabled": true
+}
+{
+        "address": "18.38.5C",
+        "name": "Balcony light switch", 
+        "room": "Media room", 
+        "roomLocation": "Balcony door", 
+        "type": "insteon/SwitchLinc",
+        "enabled": true
+}
+{
+        "address": "18.3D.3D",
+        "name": "Basement stairway light switch bottom", 
+        "room": "Games room", 
+        "roomLocation": "Basement stairway bottom", 
+        "type": "insteon/SwitchLinc",
+        "enabled": true
+}
+{
+        "address": "18.3D.DA",
+        "name": "Kitchen island light switch", 
+        "room": "Kitchen", 
+        "roomLocation": "North wall opposite island", 
+        "type": "insteon/SwitchLinc",
+        "enabled": true 
+}
+{
+        "address": "18.42.7F",
+        "name": "Master bathroom mirror LED light switch", 
+        "room": "Master bathroom", 
+        "roomLocation": "Right of mirror [--|-]", 
+        "type": "insteon/SwitchLinc",
+        "enabled": true
+}
+{
+        "address": "18.42.8F",
+        "enabled": true, 
+        "roomLocation": "Kitchen door leading to backyard deck", 
+        "name": "Deck Light Switch", 
+        "room": "Kitchen", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "18.44.E0",
+        "enabled": true, 
+        "roomLocation": "Basement stairway top", 
+        "name": "Basement Stairway Light Switch @ Top", 
+        "room": "Basement Stairway", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "18.46.0D",
+        "enabled": true, 
+        "roomLocation": "Beside Front Door", 
+        "name": "Front Door Entryway Light Switch", 
+        "room": "Front Door Entryway", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "18.46.D2",
+        "enabled": true, 
+        "roomLocation": "Outside Powder Room Door", 
+        "name": "1st Floor Under Stairway Light Switch", 
+        "room": "1st Floor Under Stairway", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "18.46.D7",
+        "enabled": true, 
+        "roomLocation": "", 
+        "name": "Master Bathroom Shower Fan Switch", 
+        "room": "Master Bathroom", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "18.48.D1",
+        "enabled": true, 
+        "roomLocation": "Front door", 
+        "name": "Front Porch Light Switch", 
+        "room": "Front Hallway", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "18.B3.BE",
+        "enabled": true, 
+        "roomLocation": "Under table at top of stairway on 2nd floor", 
+        "name": "2nd Floor Stairway Outlet @ Top", 
+        "room": "2nd Floor Hallway", 
+        "type": "insteon/OutletLinc"
+}
+{
+        "address": "19.07.34",
+        "enabled": true, 
+        "roomLocation": "Island", 
+        "name": "Kitchen Light Switch @ Island", 
+        "room": "Kitchen", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "19.07.A1",
+        "enabled": true, 
+        "roomLocation": "", 
+        "name": "Games Room Dimmer Light Switch", 
+        "room": "Games Room", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "19.E7.52",
+        "enabled": true, 
+        "roomLocation": "Back door", 
+        "name": "Kitchen Light Switch @ Back Door", 
+        "room": "Kitchen", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "19.ED.D1",
+        "enabled": true, 
+        "roomLocation": "By Office", 
+        "name": "Basement Hallway Light Switch @ Office", 
+        "room": "Basement Hallway", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "19.FF.B7",
+        "enabled": true, 
+        "roomLocation": "", 
+        "name": "Office Dimmer Light Switch", 
+        "room": "Office", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "1A.00.D7",
+        "enabled": true, 
+        "roomLocation": "", 
+        "name": "Media Room Light Switch", 
+        "room": "Media Room", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "1A.0C.D3",
+        "enabled": true, 
+        "roomLocation": "At front window", 
+        "name": "Living Room Light Switch", 
+        "room": "Living Room", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "1A.0E.4A",
+        "enabled": true, 
+        "roomLocation": "Kitchen Island", 
+        "name": "Dining Room Light Switch", 
+        "room": "Dining Room", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "1B.03.7E",
+        "enabled": false, 
+        "roomLocation": "South-west corner", 
+        "name": "EZFlora Irrigation Controller", 
+        "room": "Office", 
+        "type": "insteon/EZFlora"
+}
+{
+        "address": "20.C6.54",
+        "name": "3rd floor stairway light top", 
+        "room": "3rd floor stairway", 
+        "roomLocation": "Stairway top ceiling", 
+        "type": "insteon/InlineLinc",
+        "enabled": true
+}
+{
+        "address": "20.FC.31",
+        "name": "3rd floor keypad switch", 
+        "room": "3rd floor stairway", 
+        "roomLocation": "Beside bedroom door", 
+        "type": "insteon/KeypadLinc",
+        "enabled": true
+}
+{
+        "address": "22.A6.D4",
+        "enabled": true, 
+        "roomLocation": "Base of 3rd floor stairway", 
+        "name": "3rd Floor Stairway Light Switch @ Bottom", 
+        "room": "Media Room", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "23.9A.C1",
+        "enabled": false, 
+        "roomLocation": "East wall outlet, under window", 
+        "name": "PowerLinc Serial Modem", 
+        "room": "Office", 
+        "type": "insteon/PLM"
+}
+{
+        "address": "23.AC.55",
+        "enabled": true, 
+        "roomLocation": "", 
+        "name": "Master Bathroom Light Switch", 
+        "room": "Master Bathroom", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "23.AE.BB",
+        "enabled": true, 
+        "roomLocation": "Outside closet", 
+        "name": "Master Bedroom Closet Light Switch", 
+        "room": "Master Bedroom Closet", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "23.B0.2D",
+        "enabled": true, 
+        "roomLocation": "", 
+        "name": "Master Bathroom Shower Light Switch", 
+        "room": "Master Bathroom", 
+        "type": "insteon/SwitchLinc"
+}
+{
+        "address": "AA.AA.AA",
+        "enabled": false, 
+        "roomLocation": "", 
+        "name": "PowerLinc Serial Modem-Dev Unit", 
+        "room": "Office", 
+        "type": "insteon/PLM"
+}
