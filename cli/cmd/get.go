@@ -13,13 +13,13 @@ var getCmd = &Command{
 Retrieve various aspects fo the Gödel system, including
 state and configuration.`,
 	Description: "Retrieve various aspects of the Gödel system",
-	Examples: `
-# Retrieve all the thingys
+	Examples: `# Retrieve all the thingys
 get`,
 }
 
-func get(args Args) {
-	fmt.Println("get: voila")
+func get(cmd *Command, args Args) {
+	fmt.Println("get: voila\n")
+	cmd.PrintUsage()
 	return
 }
 

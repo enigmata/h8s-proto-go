@@ -7,7 +7,7 @@ import (
 	"text/tabwriter"
 )
 
-type CommandHandler func(Args)
+type CommandHandler func(*Command, Args)
 
 type Args []string
 
@@ -77,7 +77,7 @@ func (c *Command) Run() {
 					return
 				}
 			}
-			cmd.Handler(os.Args[i:])
+			cmd.Handler(cmd, os.Args[i:])
 			return
 		} else if cmd.subCommands != nil {
 			if i < len(os.Args) {

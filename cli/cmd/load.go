@@ -19,12 +19,13 @@ Load various kinds of data into the Gödel system.`,
 load insteon-devices.json`,
 }
 
-func load(args Args) {
+func load(cmd *Command, args Args) {
 	var devicesByAddress map[string]types.Device
 	var err error
 
 	if len(args) < 1 {
-		fmt.Println("Error: At least one filename is required")
+		fmt.Println("Error: At least one filename is required\n")
+		cmd.PrintUsage()
 		return
 	}
 
