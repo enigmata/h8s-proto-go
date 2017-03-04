@@ -15,8 +15,7 @@ and behaviours of the Gödel system.
 The Gödel system is a mesh network of devices comprising an automation
 environment for the betterment of lifestyle.`,
 	Description: "Command-line interface to the Gödel system",
-	Examples: `
-# Retrieve all the thingys
+	Examples: `# Retrieve all the thingys
 godel get ... `,
 }
 
