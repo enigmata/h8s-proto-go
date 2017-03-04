@@ -40,7 +40,11 @@ func (c Command) PrintUsage() {
 		}
 		w.Flush()
 	}
-	fmt.Println()
+	if c.Examples != "" {
+		fmt.Println("\nExamples:")
+		fmt.Println(c.Examples)
+		fmt.Println()
+	}
 }
 
 func (c *Command) Run() {
