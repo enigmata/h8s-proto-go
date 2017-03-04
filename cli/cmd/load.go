@@ -7,7 +7,7 @@ import (
 	"godel/types"
 )
 
-var loadCmd = Command{
+var loadCmd = &Command{
 	Name:    "load",
 	Handler: load,
 	Flags:   nil,
@@ -20,7 +20,6 @@ load insteon-devices.json`,
 }
 
 func load(args Args) {
-	fmt.Println("load: voila")
 	var devicesByAddress map[string]types.Device
 	var err error
 
@@ -44,7 +43,7 @@ func load(args Args) {
 }
 
 func init() {
-	//RootCmd.AddCommand(loadCmd)
+	RootCmd.AddSubCommand(loadCmd)
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
