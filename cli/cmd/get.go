@@ -1,29 +1,30 @@
 package cmd
 
 import (
-    "fmt"
-
-    "github.com/spf13/cobra"
+	"fmt"
 )
 
-var getCmd = &cobra.Command{
-	Use:   "get",
-	Short: "Retrieve various aspects of the Gödel system",
-	Long: `Retrieve various aspects fo the Gödel system, including
+var getCmd = Command{
+	Name:    "get",
+	Handler: get,
+	Flags:   nil,
+	UsageHelp: `get <thing>
+
+Retrieve various aspects fo the Gödel system, including
 state and configuration.`,
-    Example: `# Retrieve all the thingys
-get
-`,
-	Run: get,
+	Description: "Retrieve various aspects of the Gödel system",
+	Examples: `
+# Retrieve all the thingys
+get`,
 }
 
-func get(cmd *cobra.Command, args []string) {
-    fmt.Println("voila")
-    return
+func get(args Args) {
+	fmt.Println("get: voila")
+	return
 }
 
 func init() {
-	RootCmd.AddCommand(getCmd)
+	//RootCmd.AddCommand(getCmd)
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:

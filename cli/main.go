@@ -1,9 +1,9 @@
 package main
 
 import (
-    "godel/cli/cmd"
+	"godel/cli/cmd"
 )
 
 func main() {
-    cmd.Run()
+	cmd.RootCmd.Run()
 }
