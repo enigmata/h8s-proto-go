@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-var getCmd = Command{
+var getCmd = &Command{
 	Name:    "get",
 	Handler: get,
 	Flags:   nil,
@@ -24,7 +24,7 @@ func get(args Args) {
 }
 
 func init() {
-	//RootCmd.AddCommand(getCmd)
+	RootCmd.AddSubCommand(getCmd)
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:

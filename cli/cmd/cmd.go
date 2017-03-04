@@ -33,7 +33,7 @@ type Command struct {
 func (c Command) PrintUsage() {
 	fmt.Println(c.UsageHelp)
 	if len(c.subCommands) > 0 {
-		fmt.Println("Commands:")
+		fmt.Println("\nCommands:")
 		w := tabwriter.NewWriter(os.Stdout, 0, 0, 2, ' ', 0)
 		for name, subCmd := range c.subCommands {
 			fmt.Fprintf(w, "%s\t%s\n", name, subCmd.Description)
@@ -45,6 +45,14 @@ func (c Command) PrintUsage() {
 		fmt.Println(c.Examples)
 		fmt.Println()
 	}
+}
+
+func (c *Command) AddSubCommand(subCmd *Command) {
+	if c.subCommands == nil {
+		c.subCommands = make(Commands)
+	}
+	c.subCommands[subCmd.Name] = subCmd
+	return
 }
 
 func (c *Command) Run() {
