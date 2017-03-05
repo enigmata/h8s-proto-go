@@ -4,7 +4,6 @@ import (
 	"fmt"
 
 	"godel/device"
-	"godel/operations"
 )
 
 var loadCmd = &Command{
@@ -29,7 +28,7 @@ func load(cmd *Command, args Args) {
 		return
 	}
 
-	devicesByAddress, err = operations.Load(args)
+	devicesByAddress, err = device.LoadFromFile(args)
 	if err != nil {
 		fmt.Printf("Error: %s\n", err.Error())
 		return
