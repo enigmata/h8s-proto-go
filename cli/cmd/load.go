@@ -3,8 +3,8 @@ package cmd
 import (
 	"fmt"
 
+	"godel/device"
 	"godel/operations"
-	"godel/types"
 )
 
 var loadCmd = &Command{
@@ -20,7 +20,7 @@ load insteon-devices.json`,
 }
 
 func load(cmd *Command, args Args) {
-	var devicesByAddress map[string]types.Device
+	var devicesByAddress map[string]device.Device
 	var err error
 
 	if len(args) < 1 {
@@ -35,9 +35,9 @@ func load(cmd *Command, args Args) {
 		return
 	}
 
-	for _, device := range devicesByAddress {
-		fmt.Printf("Address: %s\n", device.Address)
-		types.PrintDevice(device, "  ")
+	for _, dev := range devicesByAddress {
+		fmt.Printf("Address: %s\n", dev.Address)
+		dev.Print("  ")
 	}
 
 	return
