@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"fmt"
+	"godel/controller"
 )
 
 var getCmd = &Command{
@@ -18,8 +18,13 @@ get`,
 }
 
 func get(cmd *Command, args Args) {
-	fmt.Println("get: voila\n")
-	cmd.PrintUsage()
+
+	isy := controller.NewClient(controller.ISY994)
+	devices := isy.Devices()
+	for _, dev := range devices {
+		dev.Print("")
+	}
+
 	return
 }
 
