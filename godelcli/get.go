@@ -1,10 +1,11 @@
-package cmd
+package main
 
 import (
+	"godel/cmd"
 	"godel/controller"
 )
 
-var getCmd = &Command{
+var getCmd = &cmd.Command{
 	Name:    "get",
 	Handler: get,
 	Flags:   nil,
@@ -17,7 +18,7 @@ state and configuration.`,
 get`,
 }
 
-func get(cmd *Command, args Args) {
+func get(cmd *cmd.Command, args cmd.Args) {
 
 	isy := controller.NewClient(controller.ISY994)
 	devices := isy.Devices()
@@ -29,7 +30,7 @@ func get(cmd *Command, args Args) {
 }
 
 func init() {
-	RootCmd.AddSubCommand(getCmd)
+	rootCmd.AddSubCommand(getCmd)
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:

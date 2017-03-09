@@ -1,8 +1,10 @@
-package cmd
+package main
 
-const ()
+import (
+	"godel/cmd"
+)
 
-var RootCmd = Command{
+var rootCmd = cmd.Command{
 	Name:    "godel",
 	Handler: nil,
 	Flags:   nil,
