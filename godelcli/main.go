@@ -1,7 +1,7 @@
 package main
 
 import (
-	"godel/godel/cmd"
+	"godel/godelcli/cmd"
 )
 
 func main() {
