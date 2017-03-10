@@ -6,6 +6,7 @@ import (
 	"os"
 	"time"
 
+	v1api "godel/api/http/v1"
 	"godel/cmd"
 )
 
@@ -39,9 +40,13 @@ interconnection of Gödel daemons.`,
 func startDaemon(cmd *cmd.Command, args cmd.Args) {
 	log.Printf("INFO: Daemon is starting, and will listen @ %s ...", daemonListenAddr)
 
+	mux := http.NewServeMux()
+
+	mux.HandleFunc(v1api.UriPathAdminVersion, v1api.AdminVersionHandler)
+
 	s := &http.Server{
 		Addr:           daemonListenAddr,
-		Handler:        nil,
+		Handler:        mux,
 		ReadTimeout:    10 * time.Second,
 		WriteTimeout:   10 * time.Second,
 		MaxHeaderBytes: 1 << 20,
