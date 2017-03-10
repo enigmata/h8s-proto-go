@@ -2,9 +2,17 @@ package main
 
 import (
 	"log"
+	"net/http"
 	"os"
+	"time"
 
 	"godel/cmd"
+)
+
+const (
+	daemonIP         string = "0.0.0.0"
+	daemonPort       string = "19999"
+	daemonListenAddr string = daemonIP + ":" + daemonPort
 )
 
 func init() {
@@ -29,6 +37,16 @@ interconnection of Gödel daemons.`,
 }
 
 func startDaemon(cmd *cmd.Command, args cmd.Args) {
-	log.Println("INFO: Daemon is starting ...")
+	log.Printf("INFO: Daemon is starting, and will listen @ %s ...", daemonListenAddr)
+
+	s := &http.Server{
+		Addr:           daemonListenAddr,
+		Handler:        nil,
+		ReadTimeout:    10 * time.Second,
+		WriteTimeout:   10 * time.Second,
+		MaxHeaderBytes: 1 << 20,
+	}
+	log.Fatal(s.ListenAndServe())
+
 	return
 }
