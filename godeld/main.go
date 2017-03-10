@@ -1,10 +1,16 @@
 package main
 
 import (
-	"fmt"
+	"log"
+	"os"
 
 	"godel/cmd"
 )
+
+func init() {
+	log.SetFlags(log.Ldate | log.Ltime | log.Lmicroseconds | log.Llongfile)
+	log.SetOutput(os.Stdout)
+}
 
 func main() {
 	rootCmd.Run()
@@ -23,6 +29,6 @@ interconnection of Gödel daemons.`,
 }
 
 func startDaemon(cmd *cmd.Command, args cmd.Args) {
-	fmt.Println("Daemon is starting ...")
+	log.Println("INFO: Daemon is starting ...")
 	return
 }
