@@ -63,11 +63,6 @@ func (c *Command) Run() {
 
 	cmd = c
 
-	if len(os.Args) <= 1 {
-		cmd.PrintUsage()
-		return
-	}
-
 	for {
 		if cmd.Handler != nil {
 			if cmd.Flags != nil && cmd.Flags.FlagSet != nil {
