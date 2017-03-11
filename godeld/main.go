@@ -42,7 +42,7 @@ func startDaemon(cmd *cmd.Command, args cmd.Args) {
 
 	mux := http.NewServeMux()
 
-	mux.HandleFunc(v1api.UriPathAdminVersion, v1api.AdminVersionHandler)
+	v1api.InstallHandlers(mux)
 
 	s := &http.Server{
 		Addr:           daemonListenAddr,
