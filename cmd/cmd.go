@@ -43,9 +43,9 @@ func (c Command) PrintUsage() {
 	if c.FlagSet != nil {
 		fmt.Println("\nFlags:\n")
 		w := tabwriter.NewWriter(os.Stdout, 0, 0, 2, ' ', 0)
-		fmt.Fprintln(w, "Name\tDefault\tDescription")
+		fmt.Fprintln(w, "Flag\tDefault\tDescription")
 		c.FlagSet.VisitAll(func(flag *flag.Flag) {
-			fmt.Fprintf(w, "%s\t%s\t%s\n", flag.Name, flag.DefValue, flag.Usage)
+			fmt.Fprintf(w, "--%s\t%s\t%s\n", flag.Name, flag.DefValue, flag.Usage)
 		})
 		w.Flush()
 	}
