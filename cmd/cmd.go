@@ -40,6 +40,15 @@ func (c Command) PrintUsage() {
 		fmt.Println(c.Examples)
 		fmt.Println()
 	}
+	if c.FlagSet != nil {
+		fmt.Println("\nFlags:\n")
+		w := tabwriter.NewWriter(os.Stdout, 0, 0, 2, ' ', 0)
+		fmt.Fprintln(w, "Name\tDefault\tDescription")
+		c.FlagSet.VisitAll(func(flag *flag.Flag) {
+			fmt.Fprintf(w, "%s\t%s\t%s\n", flag.Name, flag.DefValue, flag.Usage)
+		})
+		w.Flush()
+	}
 }
 
 func (c *Command) AddSubCommand(subCmd *Command) {
