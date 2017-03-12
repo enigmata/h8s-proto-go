@@ -18,7 +18,7 @@ const (
 )
 
 var flags struct {
-	version bool
+	version, help bool
 }
 
 var rootCmd = cmd.Command{
@@ -38,9 +38,14 @@ func init() {
 	log.SetOutput(os.Stdout)
 
 	rootCmd.FlagSet.BoolVar(&flags.version, "version", false, "version information")
+	rootCmd.FlagSet.BoolVar(&flags.help, "help", false, "command usage")
 }
 
 func startDaemon(cmd *cmd.Command, args cmd.Args) {
+	if flags.help {
+		cmd.PrintUsage()
+		return
+	}
 	if flags.version {
 		printVersion()
 		return
