@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"log"
 	"net/http"
 	"os"
@@ -16,19 +17,14 @@ const (
 	daemonListenAddr string = daemonIP + ":" + daemonPort
 )
 
-func init() {
-	log.SetFlags(log.Ldate | log.Ltime | log.Lmicroseconds | log.Llongfile)
-	log.SetOutput(os.Stdout)
-}
-
-func main() {
-	rootCmd.Run()
+var flags struct {
+	version bool
 }
 
 var rootCmd = cmd.Command{
 	Name:    "godeld",
 	Handler: startDaemon,
-	Flags:   nil,
+	FlagSet: flag.NewFlagSet("godeld", flag.ContinueOnError),
 	UsageHelp: `Daemon of the Gödel system.
 
 The Gödel system is a mesh network of devices comprising an automation
@@ -37,7 +33,19 @@ interconnection of Gödel daemons.`,
 	Description: "Daemon of the Gödel system",
 }
 
+func init() {
+	log.SetFlags(log.Ldate | log.Ltime | log.Lmicroseconds | log.Llongfile)
+	log.SetOutput(os.Stdout)
+
+	rootCmd.FlagSet.BoolVar(&flags.version, "version", false, "version information")
+}
+
 func startDaemon(cmd *cmd.Command, args cmd.Args) {
+	if flags.version {
+		printVersion()
+		return
+	}
+
 	log.Printf("INFO: Daemon is starting, and will listen @ %s ...", daemonListenAddr)
 
 	mux := http.NewServeMux()
@@ -54,4 +62,8 @@ func startDaemon(cmd *cmd.Command, args cmd.Args) {
 	log.Fatal(s.ListenAndServe())
 
 	return
+}
+
+func main() {
+	rootCmd.Run()
 }

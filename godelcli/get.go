@@ -8,7 +8,6 @@ import (
 var getCmd = &cmd.Command{
 	Name:    "get",
 	Handler: get,
-	Flags:   nil,
 	UsageHelp: `get <thing>
 
 Retrieve various aspects fo the Gödel system, including

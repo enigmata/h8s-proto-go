@@ -11,7 +11,6 @@ func main() {
 var rootCmd = cmd.Command{
 	Name:    "godel",
 	Handler: nil,
-	Flags:   nil,
 	UsageHelp: `Command-line interface to the Gödel system.
 
 Provides a means to interact with the Gödel system from a terminal

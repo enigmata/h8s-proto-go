@@ -16,7 +16,6 @@ var (
 var versionCmd = &cmd.Command{
 	Name:    "version",
 	Handler: version,
-	Flags:   nil,
 	UsageHelp: `version
 
 Print all version information.`,

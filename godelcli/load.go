@@ -10,7 +10,6 @@ import (
 var loadCmd = &cmd.Command{
 	Name:    "load",
 	Handler: load,
-	Flags:   nil,
 	UsageHelp: `load <filename> [<filename> ...]
 
 Load various kinds of data into the Gödel system.`,

@@ -11,11 +11,6 @@ type CommandHandler func(*Command, Args)
 
 type Args []string
 
-type CommandFlags struct {
-	FlagSet *flag.FlagSet
-	Flags   interface{}
-}
-
 type Commands map[string]*Command
 
 type Command struct {
@@ -24,7 +19,7 @@ type Command struct {
 	UsageHelp   string
 	Description string
 	Examples    string
-	Flags       *CommandFlags
+	FlagSet     *flag.FlagSet
 
 	// pkg-internal vars
 	subCommands Commands
@@ -65,8 +60,8 @@ func (c *Command) Run() {
 
 	for {
 		if cmd.Handler != nil {
-			if cmd.Flags != nil && cmd.Flags.FlagSet != nil {
-				err = cmd.Flags.FlagSet.Parse(os.Args[i:])
+			if cmd.FlagSet != nil {
+				err = cmd.FlagSet.Parse(os.Args[i:])
 				if err != nil {
 					fmt.Println("Error: Could not parse command-line args: " + err.Error())
 					return
