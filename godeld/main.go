@@ -9,12 +9,7 @@ import (
 
 	v1api "godel/api/http/v1"
 	"godel/cmd"
-)
-
-const (
-	daemonIP         string = "0.0.0.0"
-	daemonPort       string = "19999"
-	daemonListenAddr string = daemonIP + ":" + daemonPort
+	"godel/discovery"
 )
 
 var flags struct {
@@ -50,6 +45,8 @@ func startDaemon(cmd *cmd.Command, args cmd.Args) {
 		printVersion()
 		return
 	}
+
+	daemonListenAddr := discovery.GetDaemonAddress()
 
 	log.Printf("INFO: Daemon is starting, and will listen @ %s ...", daemonListenAddr)
 
