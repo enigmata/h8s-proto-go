@@ -10,6 +10,7 @@ import (
 	v1api "godel/api/http/v1"
 	"godel/cmd"
 	"godel/discovery"
+	"godel/version"
 )
 
 var flags struct {
@@ -42,7 +43,7 @@ func startDaemon(cmd *cmd.Command, args cmd.Args) {
 		return
 	}
 	if flags.version {
-		printVersion()
+		version.GetVersion().Print("")
 		return
 	}
 

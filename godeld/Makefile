@@ -16,4 +16,4 @@ default: install
 
 install:
 	$(REMOVE) $(GOBIN)/$(DAEMON_EXE)
-	go install -ldflags "-X main.buildTime=${BUILD_DATE} -X main.gitCommit=${GIT_HASH} -X main.daemonVersion=${DAEMON_VERSION}"
+	go install -ldflags "-X godel/version.buildTime=${BUILD_DATE} -X godel/version.gitCommit=${GIT_HASH} -X godel/version.versionNum=${DAEMON_VERSION}"
