@@ -46,3 +46,7 @@ func (v VersionInfo) Marshal() string {
 	b, _ := json.Marshal(v)
 	return string(b)
 }
+
+func (v *VersionInfo) Unmarshal(verJSON []byte) error {
+	return json.Unmarshal(verJSON, v)
+}
