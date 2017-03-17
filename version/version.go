@@ -1,6 +1,7 @@
 package version
 
 import (
+	"encoding/json"
 	"fmt"
 	"runtime"
 )
@@ -39,4 +40,9 @@ func (v VersionInfo) Print(prefix string) {
 	fmt.Printf("%sOperating System: %s\n", prefix, v.OS)
 	fmt.Println()
 	return
+}
+
+func (v VersionInfo) Marshal() string {
+	b, _ := json.Marshal(v)
+	return string(b)
 }

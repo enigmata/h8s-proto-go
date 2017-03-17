@@ -2,10 +2,14 @@ package v1
 
 import (
 	"fmt"
+	"log"
 	"net/http"
+
+	"godel/version"
 )
 
 func AdminVersionHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "version 1.0")
+	log.Printf("INFO: %s %s", r.Method, r.RequestURI)
+	fmt.Fprintf(w, version.GetVersion().Marshal())
 	return
 }
