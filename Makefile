@@ -1,6 +1,6 @@
 # overrideable by env vars
-CLI_VERSION ?= 0.1.0
-DAEMON_VERSION ?= 0.1.0
+CLI_VERSION ?= v0.1.0
+DAEMON_VERSION ?= v0.1.0
 
 # internal env vars
 GODELCLI_DIR = godelcli

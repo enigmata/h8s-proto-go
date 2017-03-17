@@ -16,4 +16,4 @@ default: install
 
 install:
 	$(REMOVE) $(GOBIN)/$(CLI_EXE)
-	go install -ldflags "-X main.buildTime=${BUILD_DATE} -X main.gitCommit=${GIT_HASH} -X main.cliVersion=${CLI_VERSION}"
+	go install -ldflags "-X godel/version.buildTime=${BUILD_DATE} -X godel/version.gitCommit=${GIT_HASH} -X godel/version.versionNum=${CLI_VERSION}"
