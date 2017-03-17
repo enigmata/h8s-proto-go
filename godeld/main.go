@@ -30,7 +30,7 @@ interconnection of Gödel daemons.`,
 }
 
 func init() {
-	log.SetFlags(log.Ldate | log.Ltime | log.Lmicroseconds | log.Llongfile)
+	log.SetFlags(log.Ldate | log.Ltime | log.Lmicroseconds | log.Lshortfile)
 	log.SetOutput(os.Stdout)
 
 	rootCmd.FlagSet.BoolVar(&flags.version, "version", false, "version information")
