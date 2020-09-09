@@ -5,7 +5,7 @@ package dropbox
 //)
 
 const (
-	AccessToken string = "f9fg4xpHcRUAAAAAAAEtc6dc87rkZcZWVlpsmYfKpjuT7hbLXr6lKMoeSlnK9d11"
+	AccessToken string = "redacted"
 )
 
 type DropboxStorageClient struct {
