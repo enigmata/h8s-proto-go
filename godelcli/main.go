@@ -1,7 +1,7 @@
 package main
 
 import (
-	"godel/cmd"
+	"github.com/enigmata/h8s-proto-go/cmd"
 )
 
 func main() {

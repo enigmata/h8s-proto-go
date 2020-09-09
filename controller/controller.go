@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"godel/controller/isy994"
-	"godel/device"
+	"github.com/enigmata/h8s-proto-go/controller/isy994"
+	"github.com/enigmata/h8s-proto-go/device"
 )
 
 type ControllerClient interface {

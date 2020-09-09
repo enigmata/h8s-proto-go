@@ -1,8 +1,8 @@
 package storage
 
 import (
-	"godel/device"
-	"godel/storage/dropbox"
+	//"github.com/enigmata/h8s-proto-go/device"
+	"github.com/enigmata/h8s-proto-go/storage/dropbox"
 )
 
 type StorageClient interface {

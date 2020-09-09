@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"godel/cmd"
-	"godel/device"
+	"github.com/enigmata/h8s-proto-go/cmd"
+	"github.com/enigmata/h8s-proto-go/device"
 )
 
 var loadCmd = &cmd.Command{
