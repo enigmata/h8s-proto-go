@@ -1,7 +1,7 @@
 package isy994
 
 import (
-	"godel/device"
+	"github.com/enigmata/h8s-proto-go/device"
 )
 
 type ISY994ControllerClient struct {

@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"path"
 
-	v1api "godel/api/http/v1"
-	"godel/cmd"
-	"godel/discovery"
-	"godel/version"
+	v1api "github.com/enigmata/h8s-proto-go/api/http/v1"
+	"github.com/enigmata/h8s-proto-go/cmd"
+	"github.com/enigmata/h8s-proto-go/discovery"
+	"github.com/enigmata/h8s-proto-go/version"
 )
 
 var versionCmd = &cmd.Command{

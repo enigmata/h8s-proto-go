@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"godel/version"
+	"github.com/enigmata/h8s-proto-go/version"
 )
 
 func AdminVersionHandler(w http.ResponseWriter, r *http.Request) {

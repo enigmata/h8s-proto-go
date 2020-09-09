@@ -1,8 +1,8 @@
 package main
 
 import (
-	"godel/cmd"
-	"godel/controller"
+	"github.com/enigmata/h8s-proto-go/cmd"
+	"github.com/enigmata/h8s-proto-go/controller"
 )
 
 var getCmd = &cmd.Command{
